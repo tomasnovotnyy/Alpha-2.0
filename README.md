@@ -2,7 +2,7 @@
 
 # *Popis programu*
 Alpha-2.0 je aplikace, která je určena pro práci s textovými soubory, umožňuje uživateli provádět kompresi a dekompresi textu. Program je rozdělen do několika tříd, které zastávají různé úkoly, včetně uživatelského rozhraní, správy souborů a manipulace s textem. Tento program je napsán v jazyce Python s využitím knihoven Tkinter pro uživatelské rozhraní.
-</br>
+</br></br>
 
 # *Spuštění programu*
 Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zapotřebí spustit skript Main.py z terminálu.</br>
@@ -18,7 +18,7 @@ Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zap
 7. Pokud jste již ve složce `Classes`, tak program spustíte následujícím příkazem: `python Main.py`
 
 Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatelské rozhraní, které umožní interakci a využití všech funkcí aplikace.
-</br></br></br>
+</br></br>
 
 # *Struktura projektu*
 
