@@ -30,4 +30,31 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - slovník zkratek
 - `/Log`: Adresář pro logování chyb a událostí.
 
-# *Třída Subjects.py*
+# Třída UI.py
+
+Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces komprese textového souboru je spuštěn voláním metody `start_action`. Uživatel má možnost vybrat textový soubor pro kompresi a zobrazit nápovědu, stejně jako ukončit aplikaci pomocí tlačítka "Konec".
+
+## *Metody*
+`__init__(self, root)`: Inicializuje objekt rozhraní, nastavuje základní vzhled a prvky okna.
+
+`start_action(self)`: Spouští akci komprese textového souboru.
+
+`save_file(self, content)`: Ukládá komprimovaný textový soubor.
+
+`log_error(self, error_message)`: Zaznamenává chyby do logu.
+
+`show_file_dialog(self)`: Zobrazuje dialogové okno pro výběr souboru.
+
+`choose_file_for_compression(self, file_dialog)`: Vybere textový soubor pro kompresi.
+
+`show_save_dialog(self, content)`: Zobrazuje dialogové okno pro výběr umístění uložení souboru.
+
+`help_action(self)`: Zobrazuje okno nápovědy.
+
+`quit_action(self)`: Ukončuje program.
+
+## Implementované funkce
+
+- **Komprese textu**: Uživatel vybírá textový soubor, který má být komprimován. Program komprimuje obsah souboru a umožňuje uživateli uložit komprimovaný soubor na vybraném umístění.
+- **Nápověda**: Aplikace nabízí možnost zobrazit uživateli nápovědu, která obsahuje užitečné informace k použití programu.
+- **Ukončení programu**: Pro ukončení aplikace slouží tlačítko "Konec".
