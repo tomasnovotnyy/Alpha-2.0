@@ -66,3 +66,10 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 
 ## *Metody*
 `save_file(content)`: Ukládá obsah do textového souboru na základě poskytnutého vstupu. Po uložení komprimovaného souboru se zobrazí dialogové okno pro případnou dekompresi.</br>
+
+## *Použití*
+1. Uživatel je vyzván k výběru umístění pro uložení souboru.
+2. Soubor je uložen a zkomprimován.
+3. Zobrazí se informační okno o úspěšném uložení.
+4. Uživatel je dotázán, zda chce soubor dekódovat zpět.
+5. Pokud uživatel souhlasí s dekompresí, zobrazí se dialog pro výběr umístění pro dekomprimovaný soubor.
