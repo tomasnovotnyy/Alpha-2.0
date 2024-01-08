@@ -73,3 +73,6 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 3. Zobrazí se informační okno o úspěšném uložení.
 4. Uživatel je dotázán, zda chce soubor dekódovat zpět.
 5. Pokud uživatel souhlasí s dekompresí, zobrazí se dialog pro výběr umístění pro dekomprimovaný soubor.
+
+## *Popis chyb*
+Při chybě při ukládání souboru se zobrazí chybové hlášení a chyba se zaznamená do logu.</br></br>
