@@ -29,8 +29,9 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - dekomprimovaný soubor
   - slovník zkratek
 - `/Log`: Adresář pro logování chyb a událostí.
+</br></br>
 
-# Třída UI.py
+# *Třída UI.py*
 
 Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces komprese textového souboru je spuštěn voláním metody `start_action`. Uživatel má možnost vybrat textový soubor pro kompresi a zobrazit nápovědu, stejně jako ukončit aplikaci pomocí tlačítka "Konec".
 
@@ -53,8 +54,15 @@ Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces kompre
 
 `quit_action(self)`: Ukončuje program.
 
-## Implementované funkce
+## *Implementované funkce*
 
 - **Komprese textu**: Uživatel vybírá textový soubor, který má být komprimován. Program komprimuje obsah souboru a umožňuje uživateli uložit komprimovaný soubor na vybraném umístění.
 - **Nápověda**: Aplikace nabízí možnost zobrazit uživateli nápovědu, která obsahuje užitečné informace k použití programu.
 - **Ukončení programu**: Pro ukončení aplikace slouží tlačítko "Konec".
+</br></br>
+
+# *Třída FileSaver.py*
+Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a dekomprimovaných souborů.
+
+## *Metody*
+`save_file(content)`: Ukládá obsah do textového souboru na základě poskytnutého vstupu. Po uložení komprimovaného souboru se zobrazí dialogové okno pro případnou dekompresi.</br>
