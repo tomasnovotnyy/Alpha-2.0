@@ -181,3 +181,7 @@ if __name__ == "__main__":
     except Exception as e:
         log_error(f"Main Error: {str(e)}")  # Zaznamenání hlavní chyby do logu
 ```
+
+## *Popis*
+`log_error(error_message)`: Funkce pro zaznamenávání chyb do logu. Chybové zprávy jsou zapisovány do souboru ErrorFileLog.txt v adresáři Log s časovým razítkem.
+`__main__`: Hlavní běh programu. Inicializuje hlavní okno Tkinter a spouští hlavní uživatelské rozhraní aplikace UI.
