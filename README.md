@@ -29,7 +29,7 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - HelpWindow.py
   - TextCompression.py
   - TextDecompression.py
-- `/Data`: Adresář pro uložení dat aplikace ->
+- `/Data`: Adresář pro uložení dat aplikace.
   - slovník zkratek
   - komprimovaný soubor
   - dekomprimovaný soubor
@@ -43,7 +43,7 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
 
 # *Třída UI.py*
 
-Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces komprese textového souboru je spuštěn voláním metody `start_action`. Uživatel má možnost vybrat textový soubor pro kompresi a zobrazit nápovědu, stejně jako ukončit aplikaci pomocí tlačítka "Konec".
+Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces komprese textového souboru je spuštěn voláním metody `start_action`. Uživatel má možnost vybrat textový soubor pro kompresi a zobrazit nápovědu, stejně jako ukončit aplikaci pomocí tlačítka "Exit".
 
 ## *Metody*
 `__init__(self, root)`: Inicializuje objekt rozhraní, nastavuje základní vzhled a prvky okna.
@@ -68,7 +68,7 @@ Třída `UI` obsahuje funkce pro interakci uživatele s aplikací. Proces kompre
 
 - **Komprese textu**: Uživatel vybírá textový soubor, který má být komprimován. Program komprimuje obsah souboru a umožňuje uživateli uložit komprimovaný soubor na vybraném umístění.
 - **Nápověda**: Aplikace nabízí možnost zobrazit uživateli nápovědu, která obsahuje užitečné informace k použití programu.
-- **Ukončení programu**: Pro ukončení aplikace slouží tlačítko "Konec".
+- **Ukončení programu**: Pro ukončení aplikace slouží tlačítko "Exit".
 </br></br>
 
 # *Třída FileSaver.py*
@@ -80,13 +80,6 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 ## *Parametry*:
   - `content`
     - Obsah, který se má uložit do souboru.
-
-## *Použití*
-1. Uživatel je vyzván k výběru umístění pro uložení souboru.
-2. Soubor je uložen a zkomprimován.
-3. Zobrazí se informační okno o úspěšném uložení.
-4. Uživatel je dotázán, zda chce soubor dekódovat zpět.
-5. Pokud uživatel souhlasí s dekompresí, zobrazí se dialog pro výběr umístění pro dekomprimovaný soubor.
 
 ## *Popis chyb*
 Při chybě při ukládání souboru se zobrazí chybové hlášení a chyba se zaznamená do logu.
@@ -190,14 +183,14 @@ if __name__ == "__main__":
 `__main__`: Hlavní běh programu. Inicializuje hlavní okno Tkinter a spouští hlavní uživatelské rozhraní aplikace UI.
 
 ## *Použití*
-1. Po spuštění programu klikněte na tlačítko 'Začít'.
+1. Po spuštění programu klikněte na tlačítko 'Start'.
 2. Vyberte textový soubor pro kompresi přes dialogové okno. Podporované jsou soubory s příponou `.txt`.
 3. Po úspěšném výběru souboru bude spuštěna komprese.
-4. Klikněte na tlačítko 'Vybrat umístění' pro uložení souboru. Kompresovaný soubor se uloží na vybrané místo.
-5. Pro dekompresi zvolte možnost 'Ano' v okně, které se Vás zeptá zda si přejete soubor dekódovat zpět.
+4. Klikněte na tlačítko 'Select Location' pro uložení souboru. Kompresovaný soubor se uloží na vybrané místo.
+5. Pro dekompresi zvolte možnost 'Yes' v okně, které se Vás zeptá zda si přejete soubor dekódovat zpět.
 6. Vyberte umístění pro uložení dekomprimovaného souboru.
 7. Uloží se původní obsah souboru.
-8. Ukončete program kliknutím na tlačítko 'Konec'.
+8. Ukončete program kliknutím na tlačítko 'Exit'.
 </br></br>
 
 # *Testování a zpětná vazba uživatelů*
