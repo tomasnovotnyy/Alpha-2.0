@@ -125,3 +125,59 @@ Tato metoda poskytuje funkci pro dekomprimaci textu na základě poskytnutého s
 </br></br>
 
 # *Třída HelpWindow.py*
+Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám umožňuje získat nápovědu pro použití aplikace a vrátit se zpět na hlavní obrazovku aplikace.
+
+### *Metody*
+`__init__(self, root, main_window)`: Inicializuje novou instanci okna nápovědy.
+   - `root`: Hlavní okno aplikace.
+   - `main_window`: Reference na hlavní okno pro návrat zpět.
+
+`return_home(self)`: Metoda pro návrat na úvodní obrazovku hlavního okna.
+
+`on_close(self)`: Metoda pro zavření okna nápovědy a zachycení zavíracího signálu.
+   - V případě zavření okna nápovědy vypíše chybovou hlášku.
+
+### *Použití*
+1. Klikněte na tlačítko 'Začít'.
+2. Vyberte textový soubor pro kompresi přes dialogové okno. Podporované jsou soubory s příponou `.txt`.
+3. Po úspěšném výběru souboru bude spuštěna komprese.
+4. Klikněte na tlačítko 'Vybrat umístění' pro uložení souboru. Kompresovaný soubor se uloží na vybrané místo.
+5. Pro dekompresi zvolte možnost 'Ano' v okně, které se Vás zeptá zda si přejete soubor dekódovat zpět.
+6. Vyberte umístění pro uložení dekomprimovaného souboru.
+7. Uloží se původní obsah souboru.
+8. Ukončete program kliknutím na tlačítko 'Konec'.
+</br></br>
+
+# *Třída Main.py*
+Třída `Main` obsahuje logiku pro spuštění hlavní části aplikace.
+
+## *Použití*
+Soubor Main.py obsahuje vstupní bod aplikace. Spuštěním tohoto souboru je inicializováno hlavní okno a celý aplikační proces. Základní struktura kódu vypadá takto:
+``` python
+from UI import UI
+import tkinter as tk
+from datetime import datetime
+
+
+# Funkce pro zaznamenávání chyb do logu
+def log_error(error_message):
+    """
+    Zapisuje chybové hlášky do souboru ErrorFileLog.txt.
+    :param error_message: Chybová hláška.
+    """
+    error_log_path = "../Log/ErrorFileLog.txt"
+    with open(error_log_path, 'a') as error_file:
+        now = datetime.now()
+        current_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        error_file.write(f"{current_time}: {error_message}\n\n")
+
+
+# Hlavní část programu
+if __name__ == "__main__":
+    try:
+        root = tk.Tk()  # Inicializace hlavního okna Tkinter
+        app = UI(root)  # Vytvoření instance uživatelského rozhraní
+        root.mainloop()  # Spuštění hlavní smyčky pro zobrazení GUI
+    except Exception as e:
+        log_error(f"Main Error: {str(e)}")  # Zaznamenání hlavní chyby do logu
+```
