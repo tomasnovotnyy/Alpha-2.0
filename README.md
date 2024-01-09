@@ -152,7 +152,7 @@ Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám 
 Třída `Main` obsahuje logiku pro spuštění hlavní části aplikace.
 
 ## *Použití*
-Soubor Main.py obsahuje vstupní bod aplikace. Spuštěním tohoto souboru je inicializováno hlavní okno a celý aplikační proces. Základní struktura kódu vypadá takto:
+Soubor Main.py obsahuje vstupní bod aplikace. Spuštěním tohoto souboru je inicializováno hlavní okno a celý aplikační proces. Struktura třídy vypadá takto:
 ``` python
 from UI import UI
 import tkinter as tk
