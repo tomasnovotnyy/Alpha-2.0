@@ -67,7 +67,7 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 ## *Metody*
 `save_file(content)`: Ukládá obsah do textového souboru na základě poskytnutého vstupu. Po uložení komprimovaného souboru se zobrazí dialogové okno pro případnou dekompresi.</br>
 
-### Parametry:
+## *Parametry*:
   - `content`
     - Obsah, který se má uložit do souboru.
 
@@ -79,7 +79,8 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 5. Pokud uživatel souhlasí s dekompresí, zobrazí se dialog pro výběr umístění pro dekomprimovaný soubor.
 
 ## *Popis chyb*
-Při chybě při ukládání souboru se zobrazí chybové hlášení a chyba se zaznamená do logu.</br></br>
+Při chybě při ukládání souboru se zobrazí chybové hlášení a chyba se zaznamená do logu.
+</br></br>
 
 # *Třída TextCompression.py*
 Třída `TextCompression` poskytuje metody pro kompresi textových dat pomocí vlastního kompresního algoritmu.
@@ -87,11 +88,13 @@ Třída `TextCompression` poskytuje metody pro kompresi textových dat pomocí v
 ## *Metody*
 `compress(text)`: Komprimuje vstupní text pomocí kompresního algoritmu.
 
-### Parametry:
+Metoda `compress(text)` generuje soubor se slovníkem obsahujícím zkratky pro slova použitá při kompresi. Zároveň zaznamenává proces v logovacím souboru a jakékoliv chyby během komprese do chybového logovacího souboru.
+
+## *Parametry*:
   - `text`
     - Vstupní text pro kompresi.
   
-### Návratová hodnota:
+## *Návratová hodnota*:
   - `str`
      - Kompresovaný text.
 
@@ -101,8 +104,7 @@ Tato metoda používá mou vlastní kompresní techniku -> odstraňuje interpunk
 - Soubor se slovníkem: ../Data/Dictionary.txt
 - Logovací soubor: ../Log/DictionaryFileLog.txt
 - Chybový logovací soubor: ../Log/ErrorFileLog.txt
-
-Metoda `compress(text)` generuje soubor se slovníkem obsahujícím zkratky pro slova použitá při kompresi. Zároveň zaznamenává proces v logovacím souboru a jakékoliv chyby během komprese do chybového logovacího souboru.</br></br>
+</br></br>
 
 # *Třída TextDecompression.py*
 Třída `TextDecompression` poskytuje metodu pro dekompresi textu pomocí poskytnutého slovníku.
@@ -110,14 +112,14 @@ Třída `TextDecompression` poskytuje metodu pro dekompresi textu pomocí poskyt
 ## *Metody*
 `decompress(compressed_text, dictionary_file_path)`: Dekomprimuje poskytnutý text pomocí poskytnutého slovníku.
 
-### Parametry:
+## *Parametry*:
 
 - `compressed_text`
   - Kompresovaný text, který má být dekomprimován.
 - `dictionary_file_path`
   - Cesta k souboru se slovníkem pro dekompresi.
 
-### Návratová hodnota:
+## *Návratová hodnota*:
 - `str`
   - Dekomprimovaný text nebo chybová zpráva v případě neúspěchu.
 
@@ -127,7 +129,7 @@ Tato metoda poskytuje funkci pro dekomprimaci textu na základě poskytnutého s
 # *Třída HelpWindow.py*
 Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám umožňuje získat nápovědu pro použití aplikace a vrátit se zpět na hlavní obrazovku aplikace.
 
-### *Metody*
+## *Metody*
 `__init__(self, root, main_window)`: Inicializuje novou instanci okna nápovědy.
    - `root`: Hlavní okno aplikace.
    - `main_window`: Reference na hlavní okno pro návrat zpět.
@@ -137,7 +139,7 @@ Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám 
 `on_close(self)`: Metoda pro zavření okna nápovědy a zachycení zavíracího signálu.
    - V případě zavření okna nápovědy vypíše chybovou hlášku.
 
-### *Použití*
+## *Použití*
 1. Klikněte na tlačítko 'Začít'.
 2. Vyberte textový soubor pro kompresi přes dialogové okno. Podporované jsou soubory s příponou `.txt`.
 3. Po úspěšném výběru souboru bude spuštěna komprese.
