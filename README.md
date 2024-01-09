@@ -6,7 +6,7 @@ Alpha-2.0 je aplikace, která je určena pro práci s textovými soubory, umož�
 
 # *Spuštění programu*
 Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zapotřebí spustit skript Main.py z terminálu.</br>
-## *Spuštění skriptu main.py:*
+## *Spuštění skriptu Main.py:*
 1. Stáhněte si .zip soubor programu do svého PC.
 2. Soubor extrahujte. Extrahovaný soubor bude obsahovat 3 následující soubory:
    - Složka Alpha, kde je uložený celý projekt.
@@ -67,6 +67,10 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 ## *Metody*
 `save_file(content)`: Ukládá obsah do textového souboru na základě poskytnutého vstupu. Po uložení komprimovaného souboru se zobrazí dialogové okno pro případnou dekompresi.</br>
 
+### Parametry:
+  - `content`
+    - Obsah, který se má uložit do souboru.
+
 ## *Použití*
 1. Uživatel je vyzván k výběru umístění pro uložení souboru.
 2. Soubor je uložen a zkomprimován.
@@ -76,3 +80,48 @@ Třída `FileSaver` poskytuje funkce pro ukládání a správu komprimovaných a
 
 ## *Popis chyb*
 Při chybě při ukládání souboru se zobrazí chybové hlášení a chyba se zaznamená do logu.</br></br>
+
+# *Třída TextCompression.py*
+Třída `TextCompression` poskytuje metody pro kompresi textových dat pomocí vlastního kompresního algoritmu.
+
+## *Metody*
+`compress(text)`: Komprimuje vstupní text pomocí kompresního algoritmu.
+
+### Parametry:
+  - `text`
+    - Vstupní text pro kompresi.
+  
+### Návratová hodnota:
+  - `str`
+     - Kompresovaný text.
+
+Tato metoda používá mou vlastní kompresní techniku -> odstraňuje interpunkci, identifikuje často se vyskytující se slova, přiřazuje zkratky a vytváří slovník pro budoucí dekompresi. V případě jakýchkoli chyb během komprese zaznamenává podrobnosti o chybách.
+
+## *Vygenerované soubory*
+- Soubor se slovníkem: ../Data/Dictionary.txt
+- Logovací soubor: ../Log/DictionaryFileLog.txt
+- Chybový logovací soubor: ../Log/ErrorFileLog.txt
+
+Metoda `compress(text)` generuje soubor se slovníkem obsahujícím zkratky pro slova použitá při kompresi. Zároveň zaznamenává proces v logovacím souboru a jakékoliv chyby během komprese do chybového logovacího souboru.</br></br>
+
+# *Třída TextDecompression.py*
+Třída `TextDecompression` poskytuje metodu pro dekompresi textu pomocí poskytnutého slovníku.
+
+## *Metody*
+`decompress(compressed_text, dictionary_file_path)`: Dekomprimuje poskytnutý text pomocí poskytnutého slovníku.
+
+### Parametry:
+
+- `compressed_text`
+  - Kompresovaný text, který má být dekomprimován.
+- `dictionary_file_path`
+  - Cesta k souboru se slovníkem pro dekompresi.
+
+### Návratová hodnota:
+- `str`
+  - Dekomprimovaný text nebo chybová zpráva v případě neúspěchu.
+
+Tato metoda poskytuje funkci pro dekomprimaci textu na základě poskytnutého slovníku. V případě chyby zaznamenává událost do chybového logu.
+</br></br>
+
+# *Třída HelpWindow.py*
