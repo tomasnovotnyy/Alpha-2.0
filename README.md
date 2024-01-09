@@ -185,3 +185,10 @@ if __name__ == "__main__":
 ## *Popis*
 `log_error(error_message)`: Funkce pro zaznamenávání chyb do logu. Chybové zprávy jsou zapisovány do souboru ErrorFileLog.txt v adresáři Log s časovým razítkem.
 `__main__`: Hlavní běh programu. Inicializuje hlavní okno Tkinter a spouští hlavní uživatelské rozhraní aplikace UI.
+
+# *Testování a zpětná vazba uživatelů*
+## *Testování programu*
+Program byl podroben testování a zkoušení ze strany přátel.
+## *Zpětná vazba uživatelů*
+Kamarádi, kteří program otestovali, poskytli pozitivní zpětnou vazbu. Zde jsou některé z jejich komentářů:
+</br></br>
