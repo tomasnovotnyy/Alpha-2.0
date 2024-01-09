@@ -23,12 +23,22 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
 # *Struktura projektu*
 
 - `/Classes`: Adresář obsahující třídy pro funkcionalitu aplikace.
+  - UI.py
+  - Main.py
+  - FileSaver.py
+  - HelpWindow.py
+  - TextCompression.py
+  - TextDecompression.py
 - `/Data`: Adresář pro uložení dat aplikace ->
-  - kopie originálního souboru pro kompresi
+  - slovník zkratek
   - komprimovaný soubor
   - dekomprimovaný soubor
-  - slovník zkratek
+  - kopie originálního souboru pro kompresi
 - `/Log`: Adresář pro logování chyb a událostí.
+  - ChosenFileLog
+  - DictionaryFileLog
+  - CompressedFileLog
+  - DecompressedFileLog
 </br></br>
 
 # *Třída UI.py*
@@ -138,22 +148,12 @@ Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám 
 
 `on_close(self)`: Metoda pro zavření okna nápovědy a zachycení zavíracího signálu.
    - V případě zavření okna nápovědy vypíše chybovou hlášku.
-
-## *Použití*
-1. Klikněte na tlačítko 'Začít'.
-2. Vyberte textový soubor pro kompresi přes dialogové okno. Podporované jsou soubory s příponou `.txt`.
-3. Po úspěšném výběru souboru bude spuštěna komprese.
-4. Klikněte na tlačítko 'Vybrat umístění' pro uložení souboru. Kompresovaný soubor se uloží na vybrané místo.
-5. Pro dekompresi zvolte možnost 'Ano' v okně, které se Vás zeptá zda si přejete soubor dekódovat zpět.
-6. Vyberte umístění pro uložení dekomprimovaného souboru.
-7. Uloží se původní obsah souboru.
-8. Ukončete program kliknutím na tlačítko 'Konec'.
 </br></br>
 
 # *Třída Main.py*
 Třída `Main` obsahuje logiku pro spuštění hlavní části aplikace.
 
-## *Použití*
+## *Ukázka třídy*
 Soubor Main.py obsahuje vstupní bod aplikace. Spuštěním tohoto souboru je inicializováno hlavní okno a celý aplikační proces. Struktura třídy vypadá takto:
 ``` python
 from UI import UI
@@ -186,7 +186,18 @@ if __name__ == "__main__":
 
 ## *Popis*
 `log_error(error_message)`: Funkce pro zaznamenávání chyb do logu. Chybové zprávy jsou zapisovány do souboru ErrorFileLog.txt v adresáři Log s časovým razítkem.
+
 `__main__`: Hlavní běh programu. Inicializuje hlavní okno Tkinter a spouští hlavní uživatelské rozhraní aplikace UI.
+
+## *Použití*
+1. Po spuštění programu klikněte na tlačítko 'Začít'.
+2. Vyberte textový soubor pro kompresi přes dialogové okno. Podporované jsou soubory s příponou `.txt`.
+3. Po úspěšném výběru souboru bude spuštěna komprese.
+4. Klikněte na tlačítko 'Vybrat umístění' pro uložení souboru. Kompresovaný soubor se uloží na vybrané místo.
+5. Pro dekompresi zvolte možnost 'Ano' v okně, které se Vás zeptá zda si přejete soubor dekódovat zpět.
+6. Vyberte umístění pro uložení dekomprimovaného souboru.
+7. Uloží se původní obsah souboru.
+8. Ukončete program kliknutím na tlačítko 'Konec'.
 </br></br>
 
 # *Testování a zpětná vazba uživatelů*
