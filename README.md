@@ -11,7 +11,7 @@
 Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zapotřebí spustit skript Main.py z terminálu.</br>
 ## *Spuštění skriptu Main.py:*
 1. Stáhněte si .zip soubor programu do svého PC.
-2. Soubor extrahujte. Extrahovaný soubor bude obsahovat 3 následující soubory:
+2. Soubor extrahujte. Extrahovaný soubor bude obsahovat 2 následující soubory:
    - Složka Alpha2.0, kde je uložený celý projekt.
    - Textový soubor s odkazem na tuto GitHub stránku a s kontaktem na mě.
 4. Spusťte si příkazový řádek.
