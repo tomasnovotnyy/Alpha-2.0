@@ -41,6 +41,7 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - ChosenFileLog
   - DictionaryFileLog
   - CompressedFileLog
+  - AbbreviationsFileLog
   - DecompressedFileLog
 </br></br>
 
