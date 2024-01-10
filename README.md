@@ -27,6 +27,8 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - komprimovaný soubor
   - dekomprimovaný soubor
   - kopie originálního souboru pro kompresi
+- `/Doc`: Adresář pro dokumentaci.
+  - README.md
 - `/Log`: Adresář pro logování chyb a událostí.
   - ChosenFileLog
   - DictionaryFileLog
