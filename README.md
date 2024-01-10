@@ -4,7 +4,7 @@
 - Alpha-2.0 je aplikace, která je určena pro práci s textovými soubory, umožňuje uživateli provádět kompresi a dekompresi textu.
 - Program je rozdělen do několika tříd, které zastávají různé úkoly, včetně uživatelského rozhraní, správy souborů a manipulace s textem.
 - Tento program je napsán v jazyce Python s využitím knihoven Tkinter pro uživatelské rozhraní.
-- Program je primárně navržen pro anglický jazyk. Může být použit i pro jiné jazyky, ale je nutné, aby se jednalo o jazyk bez háčků a čárek.
+- Program je primárně navržen pro anglický jazyk. Může být použit i pro jiné jazyky, ale je nutné, aby se jednalo o jazyk bez háčků a čárek. -> To je také důvod, proč je UI a celkově celé rozhraní aplikace v angličtině.
 </br></br>
 
 # *Spuštění programu*
@@ -12,13 +12,12 @@ Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zap
 ## *Spuštění skriptu Main.py:*
 1. Stáhněte si .zip soubor programu do svého PC.
 2. Soubor extrahujte. Extrahovaný soubor bude obsahovat 3 následující soubory:
-   - Složka Alpha, kde je uložený celý projekt.
+   - Složka Alpha2.0, kde je uložený celý projekt.
    - Textový soubor s odkazem na tuto GitHub stránku a s kontaktem na mě.
    - README.md soubor v Markdown formátu.
 4. Spusťte si příkazový řádek.
-5. Pomocí příkazu `cd` se dostaňte ke složce, kde máte uložený projekt.
-6. Následně se ve složce programu přesuňte do složky `Classes`.
-7. Pokud jste již ve složce `Classes`, tak program spustíte následujícím příkazem: `python Main.py`
+5. Pomocí příkazu `cd` se dostaňte do složky, kde máte uložený projekt.
+6. Pokud jste již uvnitř složky, kde máte uložený projekt, tak program spustíte následujícím příkazem: `python Main.py`
 
 Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatelské rozhraní, které umožní interakci a využití všech funkcí aplikace.
 </br></br>
@@ -226,4 +225,3 @@ if __name__ == "__main__":
 </br></br>
 ![Test (1)](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/5b9d0f96-2029-4549-a2cd-125d0fe12487)
 </br>
-![Test](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/8d4b3412-7dff-46c0-acc8-05b47384c22d)
