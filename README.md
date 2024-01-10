@@ -1,7 +1,10 @@
 # Alpha-2.0 (Ztrátová komprese textového souboru)
 
 # *Popis programu*
-Alpha-2.0 je aplikace, která je určena pro práci s textovými soubory, umožňuje uživateli provádět kompresi a dekompresi textu. Program je rozdělen do několika tříd, které zastávají různé úkoly, včetně uživatelského rozhraní, správy souborů a manipulace s textem. Tento program je napsán v jazyce Python s využitím knihoven Tkinter pro uživatelské rozhraní.
+- Alpha-2.0 je aplikace, která je určena pro práci s textovými soubory, umožňuje uživateli provádět kompresi a dekompresi textu.
+- Program je rozdělen do několika tříd, které zastávají různé úkoly, včetně uživatelského rozhraní, správy souborů a manipulace s textem.
+- Tento program je napsán v jazyce Python s využitím knihoven Tkinter pro uživatelské rozhraní.
+- Program je primárně navržen pro anglický jazyk. Může být použit i pro jiné jazyky, ale je nutné, aby se jednalo o jazyk bez háčků a čárek.
 </br></br>
 
 # *Spuštění programu*
