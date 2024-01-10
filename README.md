@@ -24,14 +24,6 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
 </br></br>
 
 # *Struktura projektu*
-
-- `/Classes`: Adresář obsahující třídy pro funkcionalitu aplikace.
-  - UI.py
-  - Main.py
-  - FileSaver.py
-  - HelpWindow.py
-  - TextCompression.py
-  - TextDecompression.py
 - `/Data`: Adresář pro uložení dat aplikace.
   - slovník zkratek
   - komprimovaný soubor
@@ -43,6 +35,19 @@ Po úspěšném spuštění skriptu se program inicializuje a zobrazí uživatel
   - CompressedFileLog
   - AbbreviationsFileLog
   - DecompressedFileLog
+- `/src`: Adresář obsahující třídy pro funkcionalitu aplikace.
+  - `/Compression`
+    - TextCompression.py
+  - `/Decompression`
+    - TextDecompression.py
+  - `/Saver`
+    - FileSaver.py
+  - `/Test`
+    - TestTextCompression.py
+  - `/UI`
+    - HelpWindow.py
+    - UI.py
+- Main.py
 </br></br>
 
 # *Třída UI.py*
@@ -147,15 +152,28 @@ Třída `HelpWindow` představuje okno nápovědy v aplikaci. Tato třída vám 
    - V případě zavření okna nápovědy vypíše chybovou hlášku.
 </br></br>
 
+# *Třída TestTextCompression.py*
+Třída `TestTextCompression` je určena pro testování funkcionality třídy `TextCompression`.
+
+## *Metody*
+`test_file_compression(self)`: Metoda pro testování komprese textového souboru.
+## *Návratová hodnota*: 
+- Testuje, zda byl obsah souboru komprimován.
+
+Tato třída pomáhá ověřit správnou funkčnost třídy `TextCompression` testováním její schopnosti komprimovat textové soubory.
+</br></br>
+
 # *Třída Main.py*
 Třída `Main` obsahuje logiku pro spuštění hlavní části aplikace.
 
 ## *Ukázka třídy*
 Soubor Main.py obsahuje vstupní bod aplikace. Spuštěním tohoto souboru je inicializováno hlavní okno a celý aplikační proces. Struktura třídy vypadá takto:
 ``` python
-from UI import UI
 import tkinter as tk
+import unittest
 from datetime import datetime
+from src.UI.UI import UI
+from src.Test.TestTextCompression import TestTextCompression
 
 
 # Funkce pro zaznamenávání chyb do logu
@@ -164,7 +182,7 @@ def log_error(error_message):
     Zapisuje chybové hlášky do souboru ErrorFileLog.txt.
     :param error_message: Chybová hláška.
     """
-    error_log_path = "../Log/ErrorFileLog.txt"
+    error_log_path = "Log/ErrorFileLog.txt"
     with open(error_log_path, 'a') as error_file:
         now = datetime.now()
         current_time = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -177,8 +195,10 @@ if __name__ == "__main__":
         root = tk.Tk()  # Inicializace hlavního okna Tkinter
         app = UI(root)  # Vytvoření instance uživatelského rozhraní
         root.mainloop()  # Spuštění hlavní smyčky pro zobrazení GUI
+        unittest.main(exit=False)  # Spuštění testů
     except Exception as e:
         log_error(f"Main Error: {str(e)}")  # Zaznamenání hlavní chyby do logu
+
 ```
 
 ## *Popis*
@@ -197,9 +217,13 @@ if __name__ == "__main__":
 8. Ukončete program kliknutím na tlačítko 'Exit'.
 </br></br>
 
-# *Testování a zpětná vazba uživatelů*
-## *Testování programu*
-Program byl podroben testování a zkoušení ze strany přátel.
+# *Testování programu*
+## *Unit Testy*
+- Program byl podroben důkladnému testování pomocí unit testů využívajících třídu `TestTextCompression` pro ověření správnosti chování funkce pro kompresi textu.
 ## *Zpětná vazba uživatelů*
-Kamarádi, kteří program otestovali, poskytli pozitivní zpětnou vazbu. Zde jsou některé z jejich komentářů:
+- Program byl také podroben testování a zkoušení ze strany přátel.
+- Kamarádi, kteří program otestovali, poskytli pozitivní zpětnou vazbu. Zde jsou některé z jejich komentářů:
 </br></br>
+![Test (1)](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/5b9d0f96-2029-4549-a2cd-125d0fe12487)
+</br>
+![Test](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/8d4b3412-7dff-46c0-acc8-05b47384c22d)
