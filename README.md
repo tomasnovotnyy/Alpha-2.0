@@ -14,7 +14,6 @@ Pro správné spuštění aplikace je třeba mít nainstalovaný Python a je zap
 2. Soubor extrahujte. Extrahovaný soubor bude obsahovat 3 následující soubory:
    - Složka Alpha2.0, kde je uložený celý projekt.
    - Textový soubor s odkazem na tuto GitHub stránku a s kontaktem na mě.
-   - README.md soubor v Markdown formátu.
 4. Spusťte si příkazový řádek.
 5. Pomocí příkazu `cd` se dostaňte do složky, kde máte uložený projekt.
 6. Pokud jste již uvnitř složky, kde máte uložený projekt, tak program spustíte následujícím příkazem: `python Main.py`
