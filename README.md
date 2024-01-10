@@ -224,4 +224,5 @@ if __name__ == "__main__":
 - Kamarádi, kteří program otestovali, poskytli pozitivní zpětnou vazbu. Zde jsou některé z jejich komentářů:
 </br></br>
 ![Test (1)](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/5b9d0f96-2029-4549-a2cd-125d0fe12487)
-</br>
+</br></br>
+![1](https://github.com/tomasnovotnyy/Alpha-2.0/assets/84340580/36e00514-4752-4747-a11f-ef48963509c1)
